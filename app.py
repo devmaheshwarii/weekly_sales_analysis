@@ -42,7 +42,7 @@ def load_data():
     return df.dropna(subset=['Issue Date', 'Total', 'Branch'])
 
 df = load_data()
-
+@st.cache_data
 def load_historical_sales_data():
     """Loads and preprocesses the historical weekly sales data from Excel sheets,
     handling the two-row header structure and selecting relevant columns."""
